@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        background-color: black;
+        }
+        .glowworm {
+          font-family: 'Glowworm', cursive;
+          font-size: 48px;
+          color: #0080ff;
+          text-align: center;
+        }
+
+        .smooth-blue {
+          position: relative;
+          background-color: #1a1a2e;
+          color: #fff;
+          border-radius: 8px;
+          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+          padding: 12px;
+          margin-top: 20px;
+          text-align: center;
+          transition: box-shadow 0.3s ease-in-out;
+        }
+
+.smooth-blue:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -0px;
+  right: -0px;
+  bottom: -0px;
+  left: -0px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 20px rgba(0, 128, 255, 0.4), 0px 4px 6px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.smooth-blue:hover:before {
+  opacity: 1;
+}
+    </style>
+    <h1 class="glowworm">Big Blue Text</h1>
+    <div class="smooth-blue">
+    This is a div with a smooth blue background.
+  </div>
+  <div class="smooth-blue">
+    pointles text <br/>
+    pointles text <br/>
+  </div>
+</body>
+</html>
