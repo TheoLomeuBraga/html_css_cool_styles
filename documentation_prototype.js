@@ -1,20 +1,4 @@
-var templates = ["tabs_5_to_6",]
 
-function regenerate_templates(){
-for ( t in templates ) {
-    divs = document.querySelectorAll('#show_'+templates[t]);
-    divs.forEach((div) => {
-      div.innerHTML = '';
-    });
-
-    const template = document.querySelector('#' + templates[t]);
-    const clonedTemplate = template.content.cloneNode(true);
-    divs = document.querySelectorAll('#show_'+templates[t]);
-    divs.forEach((div) => {
-      div.appendChild(clonedTemplate);
-    });
-}
-}
 
 function openTab(evt, tabName) {
     // Declare all variables
@@ -36,7 +20,7 @@ function openTab(evt, tabName) {
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
 
-    regenerate_templates()
+
 }
 
 
